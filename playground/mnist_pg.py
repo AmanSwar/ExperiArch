@@ -32,6 +32,12 @@ from torch.utils.data import DataLoader, random_split
 from tqdm import tqdm
 import time
 
+
+
+
+
+
+
 def get_mnist_dataloaders(batch_size=64, train_shuffle=True, val_shuffle=False, test_shuffle=False, validation_split=0.2):
     """
     prepare MNIST dataset with transformations and dataloaders, including validation set.
@@ -108,7 +114,7 @@ def get_mnist_dataloaders(batch_size=64, train_shuffle=True, val_shuffle=False, 
 
 
 
-def play_mnist(model , batch_size , loss_fn , optimizer , num_epochs , save_model=False):
+def play_mnist_supervised(model , batch_size , loss_fn , optimizer , num_epochs , save_model=False):
     train_dl , valid_dl , test_dl = get_mnist_dataloaders(batch_size=batch_size)
     DEVICE = torch.device('cuda')
 
