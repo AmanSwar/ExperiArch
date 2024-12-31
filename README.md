@@ -5,3 +5,5 @@ currently implemented
 - Resnet
 - SimCLR
 - BYOL
+- DINO
+- LARS optim
